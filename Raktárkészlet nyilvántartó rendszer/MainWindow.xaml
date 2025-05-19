@@ -1,0 +1,38 @@
+﻿<Window x:Class="Raktárkészlet_nyilvántartó_rendszer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raktárkészlet_nyilvántartó_rendszer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25">Termékek hozzáadása, listázása, keresése</Label>
+        <TextBox Name="nameInput" Margin="10 0 10 0" Grid.Row="1" VerticalAlignment="Center"  Padding="10" HorizontalContentAlignment="Center" FontSize="15" Text="Termék neve: " Tag="Termék neve: " GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"></TextBox>
+        <TextBox Name="typeInput" Margin="10 0 10 0" Grid.Row="2" VerticalAlignment="Center"  Padding="10" HorizontalContentAlignment="Center" FontSize="15" Text="Termék típusa: " Tag="Termék típusa: " GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"></TextBox>
+        <TextBox Name="priceInput" Margin="10 0 10 0" Grid.Row="3" VerticalAlignment="Center"  Padding="10" HorizontalContentAlignment="Center" FontSize="15" Text="Termék ára: " Tag="Termék ára: " GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"></TextBox>
+        <Button Click="ClickAdd" Grid.Row="4" Margin="100 20 100 20" FontSize="18">Hozzáadás</Button>
+        <Button Click="ClickShowAll" Grid.Row="5" Margin="100 20 100 20" FontSize="18">Termékek listázása</Button>
+        <TextBox Name="IdInput" Grid.Row="5" Grid.Column="2" Width="150" Margin= "20 20 0 20" FontSize="16" Padding="10" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Termékazonosító: " Tag="Termékazonosító: " GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"></TextBox>
+        <Button Click="ClickShowById" Grid.Row="5" Grid.Column="2" Width="150" Margin= "100 20 20 20" FontSize="18" HorizontalAlignment="Right">Keresés</Button>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" VerticalScrollBarVisibility="Auto" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+            <StackPanel Name="Everything" Margin="10 10 10 10"  Background="LightGray"></StackPanel>
+        </ScrollViewer>
+
+
+    </Grid>
+</Window>
